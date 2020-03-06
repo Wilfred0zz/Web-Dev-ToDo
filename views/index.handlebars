@@ -18,7 +18,7 @@
         <ul class="TasksAdded">
         {{#each alltasks}}
                 <li>{{id}}. {{content}}</li>
-                <form action="/complete" method="post"> <input  id="comp" class='complete' type="submit" value="Completed" name="completed" > </input> </form> 
+                <form  action="/complete" method="post"> <input  id="comp" class='complete' type="submit" value="Completed" name="completed" > </input> </form> 
                 <form action="/delete" method="post"><input  name="delete" class="deleted" type="submit" value="Delete"> </input> </form> 
         {{/each}}
         </ul>

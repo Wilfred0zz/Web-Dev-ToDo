@@ -139,7 +139,7 @@ app.post('/delete',(req,res)=>{
         method: 'post',
         url: 'https://hunter-todo-api.herokuapp.com/todo-item',
         headers:{'Authorization' : `${token}`},
-        body:{deleted:true}
+        data:{deleted:true}
     })
     .then((response)=>{
         res.render('index');
@@ -155,7 +155,7 @@ app.post('/complete',(req,res)=>{
         method: 'post',
         url: 'https://hunter-todo-api.herokuapp.com/todo-item',
         headers:{'Authorization' : `${token}`},
-        body:{deleted:true}
+        data:{completed:true}
     })
     .then((response)=>{
         res.render('index');
