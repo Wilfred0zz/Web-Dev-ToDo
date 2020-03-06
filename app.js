@@ -61,8 +61,8 @@ axios({
 });
 
 app.post('/index',(req,res) =>{
-    const newTask = req.body.NewTask;
-    //console.log(newTask+ "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
+    const newItem = req.body.NewTask;
+    //console.log(newItem + "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
     const token = req.cookies.UserToken;
     //console.log(token + '_____________________________________________');
     axios({
@@ -70,7 +70,7 @@ app.post('/index',(req,res) =>{
         url:'https://hunter-todo-api.herokuapp.com/todo-item',
         headers:{'Authorization' : `${token}`},
         data:{ 
-            content: newTask
+            content: newItem
         }
         })
         .then((response) => {
@@ -96,7 +96,7 @@ app.get('/tasks',(req,res) =>{
     })
     .then((response) => {
         console.log(response);
-        var filteredTasks = response.data.filter(deletedTask => !deletedTask.deleted);
+        var filteredTasks = response.data.filter(i=> !i.deleted);
 
         res.render('index', {alltasks : filteredTasks});
     })
