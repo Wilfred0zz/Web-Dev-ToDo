@@ -169,6 +169,6 @@ app.get('/logout', (req,res)=> {
     res.render('login');
 });
 
-app.listen(process.eventNames.PORT||3000);
+app.listen(process.evn.PORT||3000);
 
 
