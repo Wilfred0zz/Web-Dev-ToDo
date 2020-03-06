@@ -1,0 +1,25 @@
+<link href="TodoListStyle.css" type="text/css" rel="stylesheet">
+
+<h1 class="titles">TodoList</h1>
+
+    <h2 class="subheading">Enter tasks</h2>
+
+        <form action="/index" method="post" class= "firstTask">
+            Task: <input type="text" value="" name="NewTask"/>
+            <button  class="Addbutton" id="TaskButton" onclick= "submit"  >Add</button>
+        </form>
+
+        <form action="/tasks" method="get" class="Alltasks">
+             <input class="viewItems" id="ShowItems" type="submit" name="AllTasks" value="Show Items"></input>
+        </form>
+        <br>
+        <form action="/logout"><input type="submit" id="logout" name="logOut" value="Logout"/></form>
+      
+        <ul class="TasksAdded">
+        {{#each alltasks}}
+                <li>{{content}}</li>
+                <input class='complete' type="submit" value="Completed"> </input> <input class="deleted" type="submit" value="Delete"> </input>
+        {{/each}}
+        </ul>
+
+    

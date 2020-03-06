@@ -1,0 +1,58 @@
+.titles{
+    font-family: Cambria;
+    color: teal;
+    border: teal solid 3px ;
+    border-inline-style: dashed;
+    display: inline ;
+    
+}
+
+
+
+body{
+    background: #141e30;
+    background: linear-gradient(-90deg, #35577D, #141E30);
+    padding: 0;
+    text-align: center;
+}
+
+.firstTask{
+    color: skyblue;
+}
+
+
+.subheading{
+    color: darkcyan;
+    text-align: center;
+    text-decoration: underline;
+    bottom: 100px;
+
+}
+
+
+
+.Addbutton{
+    font-size:medium;
+    background-color:skyblue;
+    color:black;
+    border: thin;
+}
+
+.logout{
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+.deleted{
+    font-size:small;
+    background-color:skyblue;
+    color:black;
+    
+}
+
+.complete{ font-size:small;
+    background-color:skyblue;
+    color:black;
+    
+}
