@@ -133,6 +133,37 @@ app.post('/registerNew',(req,res)=>{
     
 });
 
+app.post('/delete',(req,res)=>{
+    const token= req.cookies.UserToken;
+    axios({
+        method: 'post',
+        url: 'https://hunter-todo-api.herokuapp.com/todo-item',
+        headers:{'Authorization' : `${token}`},
+        body:{deleted:true}
+    })
+    .then((response)=>{
+        res.render('index');
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+});
+
+app.post('/complete',(req,res)=>{
+    const token= req.cookies.UserToken;
+    axios({
+        method: 'post',
+        url: 'https://hunter-todo-api.herokuapp.com/todo-item',
+        headers:{'Authorization' : `${token}`},
+        body:{deleted:true}
+    })
+    .then((response)=>{
+        res.render('index');
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+});
 
 app.get('/logout', (req,res)=> {
     res.render('login');
